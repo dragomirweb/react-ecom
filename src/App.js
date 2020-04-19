@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
+import './assets/css/main.css';
 
 import HomePage from './homepage.component'
 
 function App() {
   return (
-    <div>
+    <div className="container mx-auto">
       <HomePage />
     </div>
   );
