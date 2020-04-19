@@ -5,7 +5,7 @@ import HomePage from './homepage.component'
 
 function App() {
   return (
-    <div className="container mx-auto">
+    <div className="container">
       <HomePage />
     </div>
   );
