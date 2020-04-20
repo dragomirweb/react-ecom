@@ -226,7 +226,7 @@ module.exports = {
 		},
 		fontFamily: {
 			sans: [
-				'system-ui',
+				'Roboto',
 				'-apple-system',
 				'BlinkMacSystemFont',
 				'"Segoe UI"',
