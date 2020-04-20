@@ -1,12 +1,15 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
+
 import './menu-item.styles.scss';
 
-
-const MenuItem = ({ title, imageUrl, size }) => (
+const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => (
 	<div
 		className={`${size === 'large'
 			? 'md:col-span-6 min-h-xl'
 			: 'md:col-span-4 min-h-lg'} menu-item relative overflow-hidden cursor-pointer flex justify-center items-center `}
+		onClick={() => history.push(`${match.url}${linkUrl}`)}
 	>
 		<div
 			className="menu-item-bg absolute w-full h-full bg-cover bg-center bg-no-repeat"
@@ -21,4 +24,4 @@ const MenuItem = ({ title, imageUrl, size }) => (
 	</div>
 );
 
-export default MenuItem;
+export default withRouter(MenuItem);
