@@ -17,7 +17,7 @@ const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => (
 				backgroundImage: `url(${imageUrl})`
 			}}
 		/>
-		<div className="menu-item-content flex flex-col items-center hover:bg-gray-400 opacity-75 bg-gray-200 px-12 py-5 z-10">
+		<div className="menu-item-content flex flex-col items-center hover:bg-base-600 opacity-75 bg-base-400 px-12 py-5 z-10">
 			<h1 className="text-4xl">{title.toUpperCase()}</h1>
 			<span className="text-sm">SHOP NOW</span>
 		</div>
