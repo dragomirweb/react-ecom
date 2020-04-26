@@ -13,6 +13,7 @@ const Header = () => (
 				<Link className="px-4 py-3 hover:text-gray-600" to="/">HOME</Link>
 				<Link className="px-4 py-3 hover:text-gray-600" to="/shop">SHOP</Link>
 				<Link className="px-4 py-3 hover:text-gray-600" to="/contact">CONTACT</Link>
+				<Link className="px-4 py-3 hover:text-gray-600" to="/signIn">SIGN IN</Link>
 			</div>
 		</div>
 	</div>

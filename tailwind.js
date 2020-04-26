@@ -339,6 +339,7 @@ module.exports = {
 		}),
 		minHeight: {
 			'0': '0',
+			xss: '2.5rem',
 			xs: '5rem',
 			sm: '10rem',
 			md: '15rem',
