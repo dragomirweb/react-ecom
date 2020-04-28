@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 
 import './assets/css/main.css';
 
@@ -21,6 +21,7 @@ class App extends Component {
 	componentDidMount() {
     this.unsubscribeFromAuthState =	auth.onAuthStateChanged((user) => {
 			this.setState({ currentUser: user });
+			this.props.history.push('/')
 		});
   }
   
@@ -29,9 +30,10 @@ class App extends Component {
   }
 
 	render() {
+
 		return (
 			<div>
-				<Header />
+				<Header currentUser={this.state.currentUser} />
 				<Switch>
 					<Route exact path="/" component={HomePage} />
 					<Route exact path="/shop" component={ShopPage} />
@@ -43,4 +45,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default withRouter(App);
