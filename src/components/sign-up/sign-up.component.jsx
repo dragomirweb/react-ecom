@@ -17,7 +17,15 @@ export default class SignUp extends React.Component {
       errorMessage: '',
       confirmationMessage: ''
 		};
-	}
+  }
+  
+  componentDidUpdate() {
+    if(this.state.confirmationMessage.length > 0) {
+      setTimeout(() => {
+        this.setState({ confirmationMessage: '' });
+      }, 5000)
+    }
+  }
 
 	handleSubmit = async (event) => {
 		const { displayName, email, password, confirmPassword } = this.state;
@@ -47,7 +55,8 @@ export default class SignUp extends React.Component {
 		const { value, name } = event.target;
 		if (this.state.errorMessage.length > 0) this.setState({ errorMessage: '' });
 		this.setState({ [name]: value });
-	};
+  };
+  
 
 	render() {
 		const { displayName, email, password, confirmPassword, errorMessage, confirmationMessage } = this.state;
