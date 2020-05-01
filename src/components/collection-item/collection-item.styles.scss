@@ -1,0 +1,17 @@
+.cart-item {
+
+  .custom-button {
+    opacity: 0.8;
+    width: 80%;
+    display: none;
+  }
+
+  &:hover {
+    .bg-cover {
+      opacity: 0.8;
+    }
+    .custom-button {
+      display: flex;
+    }
+  }
+}
