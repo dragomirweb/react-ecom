@@ -7,6 +7,7 @@ import {
 } from '../../redux/cart/cart.selectors'
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
+import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component'
 
 import './checkout.styles.scss'
 
@@ -39,6 +40,13 @@ const CheckoutPage = ({ cartItems, totalPrice }) => {
         <div className="col-start-2 col-span-10 grid grid-cols-12 gap-2 py-3 border-t-2">
           <div className="col-start-10 col-span-3 text-right mt-10 text-4xl">
             Total: ${totalPrice}
+          </div>
+          <div className="col-start-3 col-span-7 text-center text-red-600">
+            <p>*Please use the below test credit card for payments*</p>
+            <p>4242 4242 4242 4242 - Exp: 01/21 - CVV: 123</p>
+          </div>
+          <div className="col-start-10 col-span-3 text-right text-4xl">
+            <StripeCheckoutButton price={totalPrice} />
           </div>
         </div>
       </div>
