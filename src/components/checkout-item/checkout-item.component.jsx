@@ -22,7 +22,7 @@ const CheckoutItem = ({ item, dispatch }) => {
 					>
 						&#10094;
 					</div>
-					<span className="text-xl mx-1">{quantity}</span>
+					<div className="text-xl mw-4 mx-1 flex justify-center">{quantity}</div>
 					<div
 						onClick={() => dispatch(addItem(item))}
 						className="text-xl w-8 flex justify-center cursor-pointer"
@@ -32,7 +32,7 @@ const CheckoutItem = ({ item, dispatch }) => {
 				</div>
 			</div>
 			<div className="col-span-2 flex items-center">
-				<span className="text-lg">{price}</span>
+				<span className="text-lg">${price}</span>
 			</div>
 			<div
 				onClick={() => dispatch(removeItemFromCart(item))}
