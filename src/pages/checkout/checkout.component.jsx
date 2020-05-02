@@ -12,10 +12,10 @@ const CheckoutPage = ({ cartItems, totalPrice }) => {
 		<div className="container">
 			<div className="grid grid-cols-12 gap-4 mt-20">
 				<div className="col-start-2 col-span-10 grid grid-cols-12 gap-2 py-3 border-b-2">
-					<div className="col-span-3 text-lg">
-						<span className="ml-5">Product</span>
+					<div className="col-span-2 text-lg">
+						<span>Product</span>
 					</div>
-					<div className="col-span-4 text-lg">
+					<div className="col-span-5 text-lg">
 						<span>Description</span>
 					</div>
 					<div className="col-span-2 text-lg">
